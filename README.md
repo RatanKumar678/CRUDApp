@@ -1,3 +1,6 @@
+# Login Details 
+- Email : ratan@test.com
+- Password : 12345
 
 # Instructions on how to run the application.
 
