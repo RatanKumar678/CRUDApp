@@ -39,12 +39,24 @@ technologies that best suit the requirements.
 - Add a contact
 - Edit contact
 - Delete/Inactivate a contact
+
 # Minimum Contact model fields:
 - First Name
 - Last Name
 - Email
 - Phone Number
 - Status (Possible values: Active/Inactive)
+
+# Points Cover In CRUD App:
+- Reactive From (With all necessary validation)
+- Lazy Loading (on contact-from)
+- Routing
+- Module (created two module contact-from and Contact-list and they have there on Routing Module)
+- Pipe (To filter data for User List)
+- Data Binding 
+- Service (To handle common business Login on user list)
+- Guards (Created to guards CanActivate and CanDeactivate)
+- Model (Created contact interface)
 
 # A typical top-level directory layout
 src
