@@ -1,0 +1,7 @@
+.custom-form{
+    width: 530px;
+    margin-top: 8%;
+    display: flex;
+    height: auto;
+    flex-direction: column;
+}

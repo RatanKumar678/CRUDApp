@@ -1,0 +1,52 @@
+.card-container.endside {
+    /* justify-content: flex-end; */
+    justify-content: space-between;
+}
+.add-button {
+    justify-content: center;
+    height: 0.3rem;
+    width: auto;
+    box-sizing: border-box;
+    margin-bottom: 0;
+}
+.search-box {
+    align-self: center;
+}
+.search-box input {
+    width: 232px;
+    padding: 5px 10px;
+    border-radius: 2px;
+    border: 1px solid rgba(158, 158, 158, 0.57);
+}
+.list {
+    width: 100%;
+    justify-content: flex-start;
+    margin-right: 0;
+    margin-left: 0;
+}
+.button-div {
+    display: flex;
+}
+
+.action-button {
+    background: none;
+    border: 1px solid #ccc;
+    height: 36px;
+    width: 36px;
+    padding: 7px;
+    box-sizing: border-box;
+    margin-left: 10px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+.action-button img {
+    width: 100%;
+}
+.user-detail {
+    display: flex;
+    justify-content: flex-start;
+    width: calc(100% - 110px);
+}
+.user-action {
+    width: 110px;
+}

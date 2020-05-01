@@ -1,0 +1,62 @@
+<div class="card-container endside">
+  <div class="card card-small add-button " tabindex="0" [routerLink]="['/contact-list']"
+    routerLinkActive="router-link-active">
+    <span>List</span>
+  </div>
+  <div class="card card-small add-button " tabindex="0" [routerLink]="['/contact']"
+    routerLinkActive="router-link-active">
+    <span>Create</span>
+  </div>
+</div>
+
+<div class="card-container">
+
+  <div class="card card-small custom-form no-cursor">
+    <div class="pageHeader">Contact Form</div>
+    <form [formGroup]="contactFrom" (ngSubmit)="onSubmit()" #contactForm>
+
+      <div class="form-inline">
+        <label for="fname">First Name<span *ngIf="f.fname.errors?.required">*</span>:</label>
+        <input type="text" id="fname" placeholder="Enter First Name" name="fname" formControlName="fname">
+        <div *ngIf="f.fname.errors && f.fname.dirty || f.fname.touched" class="invalid-feedback">
+          <div *ngIf="f.fname.errors?.required">First Name is required</div>
+          <div *ngIf="f.fname.errors?.minlength">First Name must be at least 4 characters</div>
+        </div>
+      </div>
+
+      <div class="form-inline">
+        <label for="lname">Last Name<span *ngIf="f.lname.errors?.required">*</span>:</label>
+        <input type="text" id="lname" placeholder="Enter Last Name" name="lname" formControlName="lname">
+      </div>
+
+      <div class="form-inline">
+        <label for="email">Email<span *ngIf="f.email.errors?.required">*</span>:</label>
+        <input type="text" id="email" placeholder="Enter Email" name="email" formControlName="email">
+        <div *ngIf="f.email.errors && f.email.dirty || f.email.touched" class="invalid-feedback">
+          <div *ngIf="f.email.errors?.required">Email is required</div>
+          <div *ngIf="f.email.errors?.pattern">Email is Invalid</div>
+        </div>
+      </div>
+
+      <div class="form-inline">
+        <label for="phone">Phone Number:<span *ngIf="f.phone.errors?.required">*</span></label>
+        <input type="text" id="phone" placeholder="Enter Phone Number" name="phone" formControlName="phone">
+        <div *ngIf="f.phone.errors && f.phone.dirty || f.phone.touched" class="invalid-feedback">
+          <div *ngIf="f.phone.errors?.required">Phone is required</div>
+          <div *ngIf="f.phone.errors?.minlength && !f.phone.errors?.pattern">Phone must be at least 10 Number</div>
+          <div *ngIf="f.phone.errors?.pattern">Only Number</div>
+        </div>
+      </div>
+
+      <div class="form-inline">
+        <label>
+          <input type="checkbox" name="status" formControlName="status"> Status (Possible values: Active/Inactive)
+        </label>
+      </div>
+      <div class="form-inline">
+        <button type="submit" [disabled]="contactFrom.invalid">{{ submitTypeUpdate ? 'Update' : 'Submit'}}</button>
+      </div>
+
+    </form>
+  </div> 
+</div>

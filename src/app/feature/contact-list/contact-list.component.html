@@ -1,0 +1,42 @@
+<div class="card-container endside">
+  <div class="search-box">
+    <input type="text" name="searchUser" placeholder="Search user ..." [(ngModel)]="searchTerm">
+  </div>
+  <div class="button-div">
+    <div class="card card-small add-button " tabindex="0" [routerLink]="['/contact-list']"
+      routerLinkActive="router-link-active">List </div>
+    <div class="card card-small add-button " tabindex="0" style="margin-right:0" [routerLink]="['/contact']"
+      routerLinkActive="router-link-active">Create</div>
+  </div>
+</div>
+
+<div class="card-container">
+  <ng-container *ngIf="contactList.length; else elseNoData">
+    <div class="card card-small list no-cursor" *ngFor="let item of contactList | filterData:searchTerm; let i=index"
+      [ngClass]="{'ActiveList': activeIndex == i}">
+      <div class="user-detail">{{item.fname}} {{item.lname}}
+        <span *ngIf="item.email"><img src="https://img.icons8.com/android/24/000000/long-arrow-right.png"
+            class="arrow" /></span>
+        {{item.email}}
+        <span *ngIf="item.email"><img src="https://img.icons8.com/android/24/000000/long-arrow-right.png"
+            class="arrow" /></span>
+        {{ item.status ? ' Active ' : ' Inactive '}}</div>
+      <div class="user-action">
+        <button type="button" class="action-button" title="Edit" (click)="editContact(i)">
+          <img src="https://img.icons8.com/pastel-glyph/64/000000/edit.png" />
+        </button>
+        <button type="button" class="action-button" title="Delete" (click)="removeContact(i)">
+          <img src="https://img.icons8.com/material-sharp/24/000000/filled-trash.png" />
+        </button>
+      </div>
+    </div>
+  </ng-container>
+  <ng-template #elseNoData>
+    <div class="card card-small list no-cursor" tabindex="0" *ngFor="let item of contactList; let i=index">
+      <div class="user-detail"> No Contact Details</div>
+    </div>
+  </ng-template>
+
+
+
+</div>

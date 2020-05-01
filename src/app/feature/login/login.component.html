@@ -1,0 +1,28 @@
+<div class="card-container">
+    <div class="card card-small custom-form custom-form no-cursor">
+        <div class="pageHeader">Login Form</div>
+        <form class="form-inline" [formGroup]="LoginFrom" (ngSubmit)="onSubmit()">
+            <div class="form-inline">
+                <label for="email">Email<span *ngIf="f.email.errors?.required">*</span>:</label>
+                <input type="email" id="email" name="email" formControlName="email" placeholder="Enter email"
+                    name="email">
+                <div *ngIf="f.email.errors && f.email.dirty || f.email.touched" class="invalid-feedback">
+                    <div *ngIf="f.email.errors?.required">Email is required</div>
+                    <div *ngIf="f.email.errors?.pattern">Email to login : ratan@test.com</div>
+                </div>
+            </div>
+            <div class="form-inline">
+                <label for="pwd">Password<span *ngIf="f.password.errors?.required">*</span>:</label>
+                <input type="password" id="pwd" placeholder="Enter password" name="password" name="password"
+                    formControlName="password">
+                <div *ngIf="f.password.errors && f.password.dirty || f.password.touched" class="invalid-feedback">
+                    <div *ngIf="f.password.errors?.required">Password is required</div>
+                    <div *ngIf="f.password.errors?.pattern">Password to login : 12345</div>
+                </div>
+            </div>
+            <div class="form-inline">
+                <button type="submit" [disabled]="LoginFrom.invalid">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
