@@ -5,7 +5,7 @@ import { ContactListComponent } from './contact-list.component';
 
 
 const routes: Routes = [
-  { path: '', component: ContactListComponent, canActivate: [AuthGuard] }
+  { path: 'contact-list', component: ContactListComponent, canActivate: [AuthGuard] }
 ];
 
 @NgModule({

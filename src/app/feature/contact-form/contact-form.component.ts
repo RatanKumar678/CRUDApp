@@ -13,6 +13,7 @@ export class ContactFormComponent implements OnInit {
   contactFrom: FormGroup;
   // check from action update or aad new user
   submitTypeUpdate = false;
+  submitStatus = false;
   // get user detail getting id from url
   id: number;
   
@@ -79,6 +80,7 @@ export class ContactFormComponent implements OnInit {
     if (this.contactFrom.invalid) {
       return;
     }
+    this.submitStatus = true;
     if (!this.submitTypeUpdate) {
       this.contactDetailService.addContact(this.contactFrom.value);
       this.contactFrom.reset();

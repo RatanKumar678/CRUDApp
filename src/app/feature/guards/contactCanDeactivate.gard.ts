@@ -11,7 +11,7 @@ export class ContactCanDeactivateGuard implements CanDeactivate<ContactFormCompo
         route: ActivatedRouteSnapshot,
         state: RouterStateSnapshot
     ): Observable<boolean> | Promise<boolean> | boolean {
-        if (component.contactFrom.dirty) {
+        if (component.contactFrom.dirty && !component.submitStatus) {
             return confirm('Are you sure you want to discard your changes?');
         } else {
             return true;

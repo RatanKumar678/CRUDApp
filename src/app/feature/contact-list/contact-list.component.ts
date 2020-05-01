@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ContactDetailService } from '../service/contactDetail.service';
 import { Contact } from '../models/contact.model';
@@ -67,6 +67,9 @@ export class ContactListComponent implements OnInit {
             }, 1200);
           }
         }
+        setTimeout(() => {
+          this.activeIndex = null;
+        },2000);
       }
     });
   }
@@ -77,6 +80,7 @@ export class ContactListComponent implements OnInit {
    */
   editContact(index) {
     this.route.navigate(['/contact/edit', index]);
+    this.activeIndex = null;
   }
 
   /**
