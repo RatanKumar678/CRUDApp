@@ -64,69 +64,64 @@ technologies that best suit the requirements.
 # Directory structure
 CRUDApp
 
-├─ package-lock.json
-├─ package.json
-├─ README.md
-├─ src
-│  ├─ app
-│  │  ├─ app-routing.module.ts
-│  │  ├─ app.component.css
-│  │  ├─ app.component.html
-│  │  ├─ app.component.spec.ts
-│  │  ├─ app.component.ts
-│  │  ├─ app.module.ts
-│  │  └─ feature
-│  │     ├─ contact-form
-│  │     │  ├─ contact-form-routing.module.ts
-│  │     │  ├─ contact-form.component.css
-│  │     │  ├─ contact-form.component.html
-│  │     │  ├─ contact-form.component.ts
-│  │     │  └─ contact-form.module.ts
-│  │     ├─ contact-list
-│  │     │  ├─ contact-list-routing.module.ts
-│  │     │  ├─ contact-list.component.css
-│  │     │  ├─ contact-list.component.html
-│  │     │  ├─ contact-list.component.ts
-│  │     │  └─ contact-list.module.ts
-│  │     ├─ footer
-│  │     │  ├─ footer.component.html
-│  │     │  └─ footer.component.ts
-│  │     ├─ guards
-│  │     │  ├─ authguard.guard.ts
-│  │     │  └─ contactCanDeactivate.gard.ts
-│  │     ├─ header
-│  │     │  ├─ header.component.css
-│  │     │  ├─ header.component.html
-│  │     │  ├─ header.component.spec.ts
-│  │     │  └─ header.component.ts
-│  │     ├─ login
-│  │     │  ├─ login.component.css
-│  │     │  ├─ login.component.html
-│  │     │  ├─ login.component.spec.ts
-│  │     │  └─ login.component.ts
-│  │     ├─ models
-│  │     │  └─ contact.model.ts
-│  │     ├─ page-not-found
-│  │     │  ├─ page-not-found.component.css
-│  │     │  ├─ page-not-found.component.html
-│  │     │  ├─ page-not-found.component.spec.ts
-│  │     │  └─ page-not-found.component.ts
-│  │     ├─ pipes
-│  │     │  └─ filter.pipe.ts
-│  │     └─ service
-│  │        └─ contactDetail.service.ts
-│  ├─ assets
-│  │  └─ .gitkeep
-│  ├─ environments
-│  │  ├─ environment.prod.ts
-│  │  └─ environment.ts
-│  ├─ favicon.ico
-│  ├─ index.html
-│  ├─ main.ts
-│  ├─ polyfills.ts
-│  ├─ styles.css
-│  └─ test.ts
-├─ tsconfig.app.json
-├─ tsconfig.json
-├─ tsconfig.spec.json
-└─ tslint.json
+![Image description](./src/assets/git.PNG)
+
+📦src
+ ┣ 📂app
+ ┃ ┣ 📂feature
+ ┃ ┃ ┣ 📂contact-form
+ ┃ ┃ ┃ ┣ 📜contact-form-routing.module.ts
+ ┃ ┃ ┃ ┣ 📜contact-form.component.css
+ ┃ ┃ ┃ ┣ 📜contact-form.component.html
+ ┃ ┃ ┃ ┣ 📜contact-form.component.ts
+ ┃ ┃ ┃ ┗ 📜contact-form.module.ts
+ ┃ ┃ ┣ 📂contact-list
+ ┃ ┃ ┃ ┣ 📜contact-list-routing.module.ts
+ ┃ ┃ ┃ ┣ 📜contact-list.component.css
+ ┃ ┃ ┃ ┣ 📜contact-list.component.html
+ ┃ ┃ ┃ ┣ 📜contact-list.component.ts
+ ┃ ┃ ┃ ┗ 📜contact-list.module.ts
+ ┃ ┃ ┣ 📂footer
+ ┃ ┃ ┃ ┣ 📜footer.component.html
+ ┃ ┃ ┃ ┗ 📜footer.component.ts
+ ┃ ┃ ┣ 📂guards
+ ┃ ┃ ┃ ┣ 📜authguard.guard.ts
+ ┃ ┃ ┃ ┗ 📜contactCanDeactivate.gard.ts
+ ┃ ┃ ┣ 📂header
+ ┃ ┃ ┃ ┣ 📜header.component.css
+ ┃ ┃ ┃ ┣ 📜header.component.html
+ ┃ ┃ ┃ ┣ 📜header.component.spec.ts
+ ┃ ┃ ┃ ┗ 📜header.component.ts
+ ┃ ┃ ┣ 📂login
+ ┃ ┃ ┃ ┣ 📜login.component.css
+ ┃ ┃ ┃ ┣ 📜login.component.html
+ ┃ ┃ ┃ ┣ 📜login.component.spec.ts
+ ┃ ┃ ┃ ┗ 📜login.component.ts
+ ┃ ┃ ┣ 📂models
+ ┃ ┃ ┃ ┗ 📜contact.model.ts
+ ┃ ┃ ┣ 📂page-not-found
+ ┃ ┃ ┃ ┣ 📜page-not-found.component.css
+ ┃ ┃ ┃ ┣ 📜page-not-found.component.html
+ ┃ ┃ ┃ ┣ 📜page-not-found.component.spec.ts
+ ┃ ┃ ┃ ┗ 📜page-not-found.component.ts
+ ┃ ┃ ┣ 📂pipes
+ ┃ ┃ ┃ ┗ 📜filter.pipe.ts
+ ┃ ┃ ┗ 📂service
+ ┃ ┃ ┃ ┗ 📜contactDetail.service.ts
+ ┃ ┣ 📜app-routing.module.ts
+ ┃ ┣ 📜app.component.css
+ ┃ ┣ 📜app.component.html
+ ┃ ┣ 📜app.component.spec.ts
+ ┃ ┣ 📜app.component.ts
+ ┃ ┗ 📜app.module.ts
+ ┣ 📂assets
+ ┃ ┗ 📜.gitkeep
+ ┣ 📂environments
+ ┃ ┣ 📜environment.prod.ts
+ ┃ ┗ 📜environment.ts
+ ┣ 📜favicon.ico
+ ┣ 📜index.html
+ ┣ 📜main.ts
+ ┣ 📜polyfills.ts
+ ┣ 📜styles.css
+ ┗ 📜test.ts
