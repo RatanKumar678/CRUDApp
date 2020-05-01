@@ -34,12 +34,12 @@ To clone Project (https://github.com/RatanKumar678/CRUDApp)
 Design and implement a production ready application for maintaining
 contact information. Please choose the frameworks, packages and/or
 technologies that best suit the requirements.
-Minimum expected functionality:
+# Minimum expected functionality:
 - List contacts
 - Add a contact
 - Edit contact
 - Delete/Inactivate a contact
-Minimum Contact model fields:
+# Minimum Contact model fields:
 - First Name
 - Last Name
 - Email
